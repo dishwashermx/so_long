@@ -6,10 +6,11 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 10:43:40 by ghwa              #+#    #+#             */
-/*   Updated: 2023/09/27 10:44:31 by ghwa             ###   ########.fr       */
+/*   Updated: 2023/10/10 12:27:32 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "so_long.h"
 
 int	close_win(t_map *map)
@@ -31,14 +32,19 @@ int	mapfailed(int code, t_map *map)
 	if (code == 3)
 		ft_printf("Error\nur poor\n");
 	if (code == 4)
-		ft_printf("Error\nmans playing open world");
+		ft_printf("Error\nmans playing open world\n");
 	if (code == 5)
 		ft_printf("Error\nyour existence has no purpose\n");
 	if (code == 6)
+	{
 		ft_printf("Error\nmission failed\n");
+		close_win(map);
+	}
 	if (code == 7)
+	{
 		ft_printf("congrats ig you won in %d steps\n", map->steps);
-	close_win(map);
+		close_win(map);
+	}
 	return (0);
 }
 

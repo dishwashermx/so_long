@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 15:48:04 by ghwa              #+#    #+#             */
-/*   Updated: 2023/09/27 17:14:48 by ghwa             ###   ########.fr       */
+/*   Updated: 2023/10/10 10:48:29 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,9 @@ typedef struct s_map {
 	void	*apple;
 	char	*house;
 	void	*mlx_win;
-	char	*temp_map;
 	char	**map;
+	char	*temp_map;
+	char	test;
 }	t_map;
 
 int		initpaths(t_map *map);

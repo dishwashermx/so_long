@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 15:48:00 by ghwa              #+#    #+#             */
-/*   Updated: 2023/09/27 17:18:48 by ghwa             ###   ########.fr       */
+/*   Updated: 2023/10/10 10:44:09 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(void)
 {
 	t_map	map;
 
-	map.fd = open("Maps/map2.ber", O_RDONLY);
+	map.fd = open("Maps/map1.ber", O_RDONLY);
 	initpaths(&map);
 	if (mapchecks(&map) == 0)
 		return (0);
