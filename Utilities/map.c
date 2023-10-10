@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 11:01:04 by ghwa              #+#    #+#             */
-/*   Updated: 2023/09/27 17:13:55 by ghwa             ###   ########.fr       */
+/*   Updated: 2023/10/10 10:42:47 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,7 @@ void	set_tiles(t_map *map)
 	map->img_dirt = mlx_xpm_file_to_image(map->mlx, map->dirt, &size, &size);
 	map->img_p = mlx_xpm_file_to_image(map->mlx, map->player, &size, &size);
 	map->img_fruit = mlx_xpm_file_to_image(map->mlx, map->apple, &size, &size);
-	printf("%p\n", map->img_fruit);
 	map->img_house = mlx_xpm_file_to_image(map->mlx, map->house, &size, &size);
-	printf("%p\n", map->img_house);
 }
 
 int	initpaths(t_map *map)
