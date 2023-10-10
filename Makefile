@@ -6,14 +6,14 @@
 #    By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/01 15:48:02 by ghwa              #+#    #+#              #
-#    Updated: 2023/10/10 12:27:56 by ghwa             ###   ########.fr        #
+#    Updated: 2023/10/10 15:04:49 by ghwa             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CFILES  = map.c so_long.c mapcheck.c move.c keyhandling.c
 SOURCES = $(addprefix Utilities/, $(CFILES))
 OBJECTS = ${SOURCES:.c=.o}
-CFLAGS = -Wall -Werror -Wextra -g3 -ggdb -fsanitize=address
+CFLAGS = -Wall -Werror -Wextra -g3 -ggdb
 LFLAGS = -lmlx -framework OpenGL -framework AppKit
 NAME = so_long
 CC = cc

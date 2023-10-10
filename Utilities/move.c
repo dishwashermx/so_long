@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 13:22:37 by ghwa              #+#    #+#             */
-/*   Updated: 2023/09/27 10:43:30 by ghwa             ###   ########.fr       */
+/*   Updated: 2023/10/10 14:15:32 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	w_key(t_map *map)
 		map->map[map->pypos--][map->pxpos] = 'X';
 		map->map[map->pypos][map->pxpos] = 'P';
 	}
-	else if (map->map[map->pypos - 1][map->pxpos] == 'E')
+	else if (map->map[map->pypos - 1][map->pxpos] == 'W')
 		return (3);
 	return (1);
 }
@@ -52,7 +52,7 @@ int	a_key(t_map *map)
 		map->map[map->pypos][map->pxpos--] = 'X';
 		map->map[map->pypos][map->pxpos] = 'P';
 	}
-	else if (map->map[map->pypos][map->pxpos - 1] == 'E')
+	else if (map->map[map->pypos][map->pxpos - 1] == 'W')
 		return (3);
 	return (1);
 }
@@ -74,7 +74,7 @@ int	s_key(t_map *map)
 		map->map[map->pypos++][map->pxpos] = 'X';
 		map->map[map->pypos][map->pxpos] = 'P';
 	}
-	else if (map->map[map->pypos + 1][map->pxpos] == 'E')
+	else if (map->map[map->pypos + 1][map->pxpos] == 'W')
 		return (3);
 	return (1);
 }
@@ -96,7 +96,7 @@ int	d_key(t_map *map)
 		map->map[map->pypos][map->pxpos++] = 'X';
 		map->map[map->pypos][map->pxpos] = 'P';
 	}
-	else if (map->map[map->pypos][map->pxpos + 1] == 'E')
+	else if (map->map[map->pypos][map->pxpos + 1] == 'W')
 		return (3);
 	return (1);
 }
