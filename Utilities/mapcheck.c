@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 10:18:49 by ghwa              #+#    #+#             */
-/*   Updated: 2023/10/10 14:28:15 by ghwa             ###   ########.fr       */
+/*   Updated: 2023/10/11 10:22:42 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,18 +117,18 @@ int	path_check(t_map *map, int y, int x, int count)
 int	mapchecks(t_map *map)
 {
 	if (rectangular_check(map) == 0)
-		return (mapfailed(1, map));
+		return (mapfailed(1));
 	if (tile_check(map) == 0)
 		;
 	if (map->playerfound != 1)
-		return (mapfailed(2, map));
+		return (mapfailed(2));
 	if (map->collectiblefound <= 0)
-		return (mapfailed(3, map));
+		return (mapfailed(3));
 	if (walls_check(map) == 0)
-		return (mapfailed(4, map));
+		return (mapfailed(4));
 	if (path_check(map, map->pypos, map->pxpos, 1) == 0)
-		return (mapfailed(5, map));
+		return (mapfailed(5));
 	if (map->exitfound > 1)
-		return (mapfailed(9, map));
+		return (mapfailed(9));
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 13:22:37 by ghwa              #+#    #+#             */
-/*   Updated: 2023/10/10 14:15:32 by ghwa             ###   ########.fr       */
+/*   Updated: 2023/10/11 12:02:44 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ int	d_key(t_map *map)
 int	keyinputs(int keycode, t_map *map)
 {
 	if (keycode == 53)
-		close_win(map);
+		return (close_win(1, map));
 	if (keycode == 13)
 		return (keyoutput(map, w_key(map)));
 	if (keycode == 0)

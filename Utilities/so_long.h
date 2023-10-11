@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 15:48:04 by ghwa              #+#    #+#             */
-/*   Updated: 2023/10/10 10:48:29 by ghwa             ###   ########.fr       */
+/*   Updated: 2023/10/11 12:06:17 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,11 @@ typedef struct s_map {
 int		initpaths(t_map *map);
 void	initmap(t_map *map);
 int		mapchecks(t_map *map);
-int		close_win(t_map *map);
+int		close_win(int code, t_map *map);
+int		exit_win(t_map *map);
 int		keyinputs(int keycode, t_map *map);
-int		mapfailed(int code, t_map *map);
+int		mapfailed(int code);
 int		keyoutput(t_map *map, int code);
+int		valid_file(int argc, char *file, t_map *map);
 
 #endif

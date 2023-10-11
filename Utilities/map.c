@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 11:01:04 by ghwa              #+#    #+#             */
-/*   Updated: 2023/10/10 14:28:06 by ghwa             ###   ########.fr       */
+/*   Updated: 2023/10/11 11:49:09 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void	put_tiles(t_map *map, int x, int y)
 	else if (map->map[y][x] == '\0')
 		;
 	else
-		mapfailed(8, map);
+		mapfailed(8);
 }
 
 void	initmap(t_map *map)
