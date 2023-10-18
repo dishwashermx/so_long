@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 11:01:04 by ghwa              #+#    #+#             */
-/*   Updated: 2023/10/11 11:49:09 by ghwa             ###   ########.fr       */
+/*   Updated: 2023/10/13 11:01:28 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,6 @@ void	put_tiles(t_map *map, int x, int y)
 	else if (map->map[y][x] == 'W')
 		mlx_put_image_to_window(map->mlx, map->mlx_win, \
 		map->img_house, x * 32, y * 32);
-	else if (map->map[y][x] == '\0')
-		;
-	else
-		mapfailed(8);
 }
 
 void	initmap(t_map *map)

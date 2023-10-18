@@ -6,7 +6,7 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 15:48:04 by ghwa              #+#    #+#             */
-/*   Updated: 2023/10/11 12:06:17 by ghwa             ###   ########.fr       */
+/*   Updated: 2023/10/18 09:58:25 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_map {
 	int		map_h;
 	int		validmap;
 	int		exitfound;
+	int		exitpathfound;
 	int		collectiblefound;
 	int		playerfound;
 	int		steps;
@@ -52,6 +53,7 @@ typedef struct s_map {
 	char	**map;
 	char	*temp_map;
 	char	test;
+	int		ufo;
 }	t_map;
 
 int		initpaths(t_map *map);
@@ -63,5 +65,6 @@ int		keyinputs(int keycode, t_map *map);
 int		mapfailed(int code);
 int		keyoutput(t_map *map, int code);
 int		valid_file(int argc, char *file, t_map *map);
+int		real_tile(char tile);
 
 #endif

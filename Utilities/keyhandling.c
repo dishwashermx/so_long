@@ -6,31 +6,21 @@
 /*   By: ghwa <ghwa@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 10:43:40 by ghwa              #+#    #+#             */
-/*   Updated: 2023/10/11 12:05:53 by ghwa             ###   ########.fr       */
+/*   Updated: 2023/10/11 14:54:49 by ghwa             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "so_long.h"
 
-int	exit_win(t_map *map)
-{
-	ft_printf("bravo going dark\n");
-	mlx_destroy_window(map->mlx, map->mlx_win);
-	exit(0);
-	return (0);
-}
-
 int	close_win(int code, t_map *map)
 {
 	if (code == 7)
-		ft_printf("congrats!\nyou won in %d steps\n", map->steps);
+		ft_printf("\ncongrats!\nyou won in %d steps\n", map->steps);
 	if (code == 6)
-		ft_printf("mission failed\n");
+		ft_printf("\nmission failed\n");
 	if (code == 0)
-		ft_printf("wasted\n");
-	if (code == 8)
-		ft_printf("Error\nrift in the fabric of spacetime\n");
+		ft_printf("\nwasted\n");
 	ft_printf("bravo going dark\n");
 	mlx_destroy_window(map->mlx, map->mlx_win);
 	exit(0);
@@ -55,6 +45,10 @@ int	mapfailed(int code)
 		ft_printf("Error\nmap????\n");
 	if (code == 11)
 		ft_printf("Error\n.ber pls\n");
+	if (code == 13)
+		ft_printf("Error\n.ber pls\n");
+	if (code == 8)
+		ft_printf("Error\nrift in the fabric of spacetime\n");
 	return (0);
 }
 
@@ -89,4 +83,23 @@ int	valid_file(int argc, char *file, t_map *map)
 	if (!ft_strendcmp(file, ".ber"))
 		return (mapfailed(11));
 	return (1);
+}
+
+int	real_tile(char tile)
+{
+	if (tile == 'P')
+		return (1);
+	else if (tile == '1')
+		return (1);
+	else if (tile == '0')
+		return (1);
+	else if (tile == 'X')
+		return (1);
+	else if (tile == 'C')
+		return (1);
+	else if (tile == 'E')
+		return (1);
+	else if (tile == '\0')
+		return (1);
+	return (0);
 }
